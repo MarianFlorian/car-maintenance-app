@@ -1,0 +1,67 @@
+/* assets/css/admin_users.css */
+
+:root {
+  --au-bg: #f8f9fa;
+  --au-card: #ffffff;
+  --au-primary: #007bff;
+  --au-border: #dee2e6;
+}
+
+.au-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: var(--au-bg);
+}
+
+.au-header h1 {
+  margin-bottom: 1rem;
+  color: var(--au-primary);
+}
+
+.au-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.au-card {
+  background: var(--au-card);
+  border: 1px solid var(--au-border);
+  border-radius: .5rem;
+  padding: 1rem;
+  flex: 1 1 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+.au-cards > button {
+  height: 3rem;
+}
+
+.au-filters {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  background: var(--au-card);
+  padding: .75rem;
+  border-radius: .5rem;
+  border: 1px solid var(--au-border);
+}
+.au-filters input,
+.au-filters label {
+  margin-right: .5rem;
+}
+
+.au-table .table {
+  background: var(--au-card);
+  border: 1px solid var(--au-border);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.au-table th, .au-table td {
+  vertical-align: middle;
+}

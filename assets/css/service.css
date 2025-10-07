@@ -1,0 +1,193 @@
+:root {
+  --primary-color: #1abc9c;
+  --secondary-color: #34495e;
+  --bg-light: #ecf0f1;
+  --text-dark: #2c3e50;
+  --accent-color: #e74c3c;
+}
+
+.service-container {
+  padding: 2rem 1rem;
+  background: var(--bg-light);
+  min-height: calc(100vh - 56px);
+}
+
+/* Pagina Heading */
+.service-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.service-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  position: relative;
+}
+.service-header h2::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Alert cards */
+.alert {
+  border-radius: .5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Total general card */
+.total-card {
+  border: none;
+  border-radius: .75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.total-card .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total-card .card-body span {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+}
+.total-card .card-body .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Cards per vehicul */
+.vehicle-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.vehicle-card {
+  flex: 1;
+  min-width: 240px;
+  background: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  padding: 1rem;
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
+}
+.vehicle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.vehicle-card h6 {
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: .5rem;
+}
+.vehicle-card .amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Add Service Button */
+#addServiceBtn {
+  border-radius: .75rem;
+  padding: .5rem 1.5rem;
+  font-weight: 600;
+  transition: transform .2s;
+}
+#addServiceBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Filter panel */
+.filter-panel {
+  background: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.filter-panel .form-inline .form-control,
+.filter-panel .form-inline .btn {
+  border-radius: .5rem;
+}
+.filter-panel label {
+  font-weight: 500;
+  margin-right: .5rem;
+  color: var(--secondary-color);
+}
+
+/* Table */
+.service-table {
+  background: #fff;
+  border-radius: .75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+.service-table table {
+  margin: 0;
+}
+.service-table thead {
+  background: var(--secondary-color);
+}
+.service-table thead th {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: .85rem;
+  border: none;
+}
+.service-table tbody tr:hover {
+  background: rgba(26,188,156,0.05);
+}
+.service-table td, .service-table th {
+  vertical-align: middle;
+  padding: .75rem 1rem;
+}
+
+/* Modal */
+#serviceModal .modal-content {
+  border-radius: 1rem;
+}
+#serviceModal .modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+#serviceModal .modal-body {
+  background: #fff;
+  color: var(--text-dark);
+}
+#serviceModal .modal-footer {
+  background: #f7f7f7;
+  border-top: none;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .vehicle-card {
+    min-width: 100%;
+  }
+  .filter-panel .form-inline {
+    flex-direction: column;
+  }
+  .filter-panel .form-inline .form-group,
+  .filter-panel .form-inline .btn {
+    width: 100%;
+    margin-bottom: .5rem;
+  }
+}
+.service-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.service-table table {
+  min-width: 1000px; /* sau o lățime potrivită numărului de coloane */
+}

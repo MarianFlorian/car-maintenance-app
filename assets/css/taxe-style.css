@@ -1,0 +1,76 @@
+/* taxe-style.css */
+
+/* === Font & body background === */
+body {
+  background-color: #f5f7fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* === Hero Section === */
+.hero-section {
+  position: relative;
+  height: 300px;
+  background: url('/assets/img/hero-bg.jpg') center/cover no-repeat;
+}
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-section h1,
+.hero-section p,
+.hero-section .btn {
+  position: relative;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Cards === */
+.card.border-info {
+  border: none;
+  background: #fff url('/assets/img/card-bg.svg') no-repeat bottom right;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: .75rem;
+}
+
+.vehicle-card {
+  border: none;
+  border-radius: 1rem;
+  transition: all .3s ease;
+}
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* === Table styling === */
+.table thead {
+  background-color: #3366ff;
+  color: #fff;
+  border-radius: .5rem;
+}
+.table tbody tr:hover {
+  background-color: rgba(51, 102, 255, 0.1);
+}
+
+/* === Modal styling === */
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-header {
+  background-color: #3366ff;
+  color: #fff;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* === Buttons === */
+.btn-outline-primary {
+  border-radius: 2rem;
+  padding: .5rem 1.5rem;
+  transition: background-color .2s;
+}
+.btn-outline-primary:hover {
+  background-color: #3366ff;
+  color: #fff;
+}

@@ -1,0 +1,46 @@
+/* assets/css/admin_stats.css */
+
+/* Filter panel */
+.filter-panel {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+/* Heatmap placeholder */
+.heatmap-placeholder {
+  background: #f0f0f0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  border-radius: 0.75rem;
+}
+
+/* Timeline */
+.timeline {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-left: 0;
+  list-style: none;
+}
+.timeline li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.timeline li .time {
+  flex: 0 0 80px;
+  font-size: 0.85rem;
+  color: #555;
+}
+.timeline li .event {
+  flex: 1;
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.05);
+}

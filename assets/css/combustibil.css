@@ -1,0 +1,157 @@
+/*combustibil.css*/
+:root {
+  --primary-color: #2575fc;
+  --accent-color: #6a11cb;
+  --bg-light: #f8f9fa;
+  --text-dark: #343a40;
+  --stat-bg: #ffffff;
+}
+
+.fuel-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+}
+
+.fuel-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.fuel-header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.fuel-stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  flex: 1 1 200px;
+  background: var(--stat-bg);
+  border-radius: .75rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.05);
+  text-align: center;
+}
+.stat-card h3 {
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+.stat-card p {
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.fuel-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.filter-form {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+.filter-form label {
+  align-self: center;
+}
+.filter-form input,
+.filter-form button {
+  border-radius: .5rem;
+}
+.btn-add {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: .5rem 1.25rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,0.1);
+  transition: background .3s ease;
+}
+.btn-add:hover {
+  background: var(--primary-color);
+}
+
+.fuel-table-wrapper {
+  overflow-x: auto;
+  background: var(--bg-light);
+  padding: 1rem;
+  border-radius: .75rem;
+}
+.fuel-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+.fuel-table th,
+.fuel-table td {
+  padding: .75rem 1rem;
+  text-align: left;
+}
+.fuel-table thead th {
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.fuel-table tbody tr {
+  background: #fff;
+  transition: transform .2s, box-shadow .2s;
+}
+.fuel-table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.05);
+}
+.fuel-table td.actions {
+  display: flex;
+  gap: .5rem;
+}
+.fuel-table .btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+.fuel-table .btn:hover {
+  color: var(--accent-color);
+}
+
+/* Modal Custom */
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  border-bottom: none;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.modal-title {
+  font-weight: 600;
+}
+.modal-body {
+  padding: 1.5rem;
+}
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+.modal-footer .btn {
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+}

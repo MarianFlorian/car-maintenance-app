@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #1abc9c;
+  --secondary-color: #2c3e50;
+  --bg-light: #ecf0f1;
+  --text-dark: #34495e;
+  --accent-color: #e74c3c;
+}
+
+.tax-container {
+  padding: 2rem 1rem;
+  background: var(--bg-light);
+  min-height: calc(100vh - 56px);
+}
+
+.tax-header h2 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.tax-header h2::after {
+  content: '';
+  display: block;
+  width: 4rem; height: 4px;
+  background: var(--primary-color);
+  margin: .5rem auto 0;
+  border-radius:2px;
+}
+
+.card-total, .vehicle-cards .vehicle-card {
+  background: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform .2s, box-shadow .2s;
+}
+.card-total { margin-bottom: 2rem; }
+.card-total .card-body {
+  display: flex; justify-content: space-between; align-items:center;
+}
+.card-total .card-body span { font-size:1.25rem; color:var(--text-dark); }
+.card-total .value { font-size:2rem; font-weight:700; }
+
+.vehicle-cards {
+  display: flex; flex-wrap: wrap; gap:1rem; margin-bottom:2rem;
+}
+.vehicle-card {
+  flex:1; min-width:200px;
+  padding:1rem; text-align:center;
+}
+.vehicle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.vehicle-card h6 { color:var(--secondary-color); margin-bottom:.5rem; }
+.vehicle-card .amount { font-size:1.75rem; font-weight:700; }
+
+.filter-panel {
+  background:#fff; padding:1rem; border-radius:.75rem;
+  box-shadow:0 4px 16px rgba(0,0,0,0.05); margin-bottom:2rem;
+}
+.filter-panel .form-control, .filter-panel .btn {
+  border-radius:.5rem;
+}
+.filter-panel label { color:var(--secondary-color); font-weight:500; }
+
+.tax-table {
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin-bottom:2rem;
+}
+.tax-table table {
+  min-width: 900px;
+  background:#fff; border-radius:.75rem; overflow:hidden;
+  box-shadow:0 4px 16px rgba(0,0,0,0.05);
+}
+.tax-table thead { background: var(--secondary-color); }
+.tax-table thead th {
+  color:#fff; font-weight:500; text-transform:uppercase;
+  border:none; padding:.75rem 1rem;
+}
+.tax-table td, .tax-table th {
+  vertical-align:middle; padding:.75rem 1rem;
+}
+.tax-table tbody tr:hover { background: rgba(26,188,156,0.05); }
+
+#taxModal .modal-content { border-radius:1rem; }
+#taxModal .modal-header { background:var(--primary-color); color:#fff; border:none; }
+#taxModal .modal-body { background:#fff; color:var(--text-dark); }
+#taxModal .modal-footer { background:#f7f7f7; border:none; }
+
+@media (max-width:767px) {
+  .vehicle-card { min-width:100%; }
+  .filter-panel .form-inline { flex-direction:column; }
+  .filter-panel .form-group, .filter-panel .btn { width:100%; margin-bottom:.5rem; }
+}

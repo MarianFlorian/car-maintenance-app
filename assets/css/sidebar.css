@@ -1,0 +1,162 @@
+/* -- ROOT: Define variables for easy customization -- */
+:root {
+  --sidebar-width: 260px;
+  --sidebar-bg: #232D3F; /* Slightly desaturated dark blue */
+  --sidebar-accent: #1abc9c;
+  --text-primary: #ecf0f1;
+  --text-secondary: #bdc3c7;
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  --active-bg: rgba(255, 255, 255, 0.1);
+  --transition-speed: 0.2s;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* -- Main Sidebar Styling -- */
+#sidebar {
+  width: var(--sidebar-width);
+  position: fixed;
+  top: 56px; /* Adjust based on your navbar height */
+  left: 0;
+  bottom: 0;
+  background: var(--sidebar-bg);
+  color: var(--text-primary);
+  overflow-y: auto;
+  z-index: 1025;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: var(--font-stack);
+}
+
+/* -- Sidebar Header -- */
+#sidebar .sidebar-header {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#sidebar .sidebar-header h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* -- Navigation Components -- */
+#sidebar ul.components {
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+#sidebar ul.components > li {
+  padding: 0; /* Padding is now on the anchor tag */
+}
+
+/* -- Base Link Styling -- */
+#sidebar ul.components > li a,
+#sidebar ul.components > li span {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  border-left: 4px solid transparent; /* Placeholder for active state */
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+#sidebar ul.components > li a i,
+#sidebar ul.components > li span i {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  width: 20px; /* Aligns text neatly */
+  text-align: center;
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+/* -- Link Hover State -- */
+#sidebar ul.components > li:not(.active) a:hover,
+#sidebar ul.components > li:not(.active) span:hover {
+  background: var(--hover-bg);
+  border-left-color: var(--hover-bg); /* Match background */
+}
+
+/* -- Active Link State -- */
+#sidebar ul.components > li.active > a {
+  background: var(--active-bg);
+  color: #fff;
+  border-left: 4px solid var(--sidebar-accent);
+}
+
+#sidebar ul.components > li.active > a i {
+  color: var(--sidebar-accent);
+}
+
+/* -- Submenu Styling -- */
+.sidebar-submenu {
+  padding-left: 48px; /* Indent based on icon width + padding */
+  margin: 0;
+  background: rgba(0, 0, 0, 0.15); /* Slightly different background */
+}
+
+.sidebar-submenu li {
+  padding: 0;
+}
+
+.sidebar-submenu li a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color var(--transition-speed);
+}
+
+.sidebar-submenu li.active > a,
+.sidebar-submenu li a:hover {
+  color: var(--sidebar-accent);
+}
+
+/* -- Section Title & Divider -- */
+.sidebar-section {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--sidebar-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  opacity: 0.8;
+}
+
+.sidebar-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0.75rem 1.5rem;
+}
+
+/* -- RESPONSIVE BEHAVIOR (Unchanged logic, but using variables) -- */
+
+/* Desktop: Shift content to the right */
+@media (min-width: 992px) {
+  #content {
+    margin-left: var(--sidebar-width);
+    transition: margin-left 0.3s ease;
+  }
+}
+
+/* Mobile: Hide sidebar by default */
+@media (max-width: 991.98px) {
+  #sidebar {
+    display: none;
+    /* Optional: Add a transition for a slide-in effect */
+    /* transform: translateX(-100%);
+    transition: transform 0.3s ease; */
+  }
+
+  #sidebar.show {
+    display: block;
+    /* transform: translateX(0); */
+  }
+
+  #content {
+    margin-left: 0 !important;
+  }
+}
