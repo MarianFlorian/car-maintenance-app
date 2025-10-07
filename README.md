@@ -9,6 +9,8 @@ This is a web application designed to help users efficiently manage and maintain
 - Automatically populate data from receipts using OCR (optional feature)
 - Store and manage important vehicle documents
 - Access visual statistics and reports for expenses and fuel consumption
+- Travel cost and distance calculator (based on budget)
+- Blood alcohol content (BAC) calculator
 - Simple and user-friendly interface
 
 ## Technologies Used
@@ -30,7 +32,7 @@ This project is for educational purposes and portfolio demonstration.
 ## Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.PNG)
 *Overview of vehicles, recent expenses, and quick access to features.*
 
 ### Add Fuel / Expense
@@ -38,10 +40,10 @@ This project is for educational purposes and portfolio demonstration.
 *Form to record fuel purchases*
 
 ### Vehicle Details
-![Vehicle Details](screenshots/vehicles.png)
+![Vehicle Details](screenshots/vehicles.PNG)
 *Detailed information about a specific car*
 
 ### Statistics
-![Statistics](screenshots/statistics.png)
+![Statistics](screenshots/statistics.PNG)
 *Visual charts showing fuel consumption and expenses over time.*
 
