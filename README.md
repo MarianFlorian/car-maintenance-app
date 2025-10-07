@@ -33,17 +33,21 @@ This project is for educational purposes and portfolio demonstration.
 
 ### Dashboard
 ![Dashboard](screenshots/dashboard.PNG)
+
 *Overview of vehicles, recent expenses, and quick access to features.*
 
 ### Add Fuel / Expense
 ![Add Expense](screenshots/add-fuel.png)
+
 *Form to record fuel purchases*
 
 ### Vehicle Details
-![Vehicle Details](screenshots/vehicles.PNG)
+![Vehicle Details](screenshots/vehicle.PNG)
+
 *Detailed information about a specific car*
 
 ### Statistics
 ![Statistics](screenshots/statistics.PNG)
+
 *Visual charts showing fuel consumption and expenses over time.*
 
